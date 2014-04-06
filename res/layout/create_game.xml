@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/homescreenbackground" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@drawable/back_with_shadow"
+                    android:padding="10dp" >
+
+                    <EditText
+                        android:id="@+id/nameEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:ems="10"
+                        android:hint="Game Name" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameEdit"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:text="Number of Clues"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/numClues"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                      
+                            android:text="0"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/layout1"
+                        android:layout_marginTop="14dp" />
+
+                    <EditText
+                        android:id="@+id/notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/seekBar1"
+                        android:layout_marginTop="120dp"
+                        android:ems="10"
+                        android:hint="Notes"
+                        android:inputType="textMultiLine" />
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/notes"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <Button
+                            android:id="@+id/create"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:text="Create"
+                            android:gravity="center"
+                            android:background="#ffffff"
+                            android:padding="10dp" 
+                            android:textSize="20sp"/>
+						<View android:layout_width="5dip" android:layout_height="1dip"/>
+                        <Button
+                            android:id="@+id/cancel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:text="Cancel" 
+                            android:gravity="center"
+                            android:background="#ffffff"
+                            android:padding="10dp"  
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/layout1"
+                        android:layout_below="@+id/seekBar1"
+                        android:layout_marginTop="51dp"
+                        android:text="Open Game" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/players"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

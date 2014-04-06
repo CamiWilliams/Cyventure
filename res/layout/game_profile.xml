@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/gName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="18dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/gPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gName"
+        android:layout_below="@+id/gName"
+        android:layout_marginTop="18dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textClues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gPlayers"
+        android:layout_below="@+id/gPlayers"
+        android:layout_marginTop="30dp"
+        android:text="Clues"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/gProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textClues"
+        android:layout_alignBottom="@+id/textClues"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/gBClues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gNotes"
+        android:layout_alignRight="@+id/gProgress"
+        android:layout_below="@+id/gNotes"
+        android:layout_marginTop="96dp"
+        android:text="Clues" />
+
+    <Button
+        android:id="@+id/gBEnd"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gBClues"
+        android:layout_alignRight="@+id/gBClues"
+        android:layout_below="@+id/gBClues"
+        android:layout_marginTop="27dp"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/gNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textClues"
+        android:layout_below="@+id/textClues"
+        android:layout_marginTop="55dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textHints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textClues"
+        android:layout_below="@+id/textClues"
+        android:layout_marginTop="16dp"
+        android:text="Hints Remaining"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/gHints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textHints"
+        android:layout_alignBottom="@+id/textHints"
+        android:layout_alignLeft="@+id/gProgress"
+        android:text="5"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
